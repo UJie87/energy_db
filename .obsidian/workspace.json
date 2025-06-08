@@ -1,0 +1,225 @@
+{
+  "main": {
+    "id": "d842bfcffdd5ce06",
+    "type": "split",
+    "children": [
+      {
+        "id": "8b59451c6ced918b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2498480c3a03f02e",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "關聯圖檢視"
+            }
+          },
+          {
+            "id": "74a3398d7ac04899",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "field_deifinition.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "field_deifinition"
+            }
+          },
+          {
+            "id": "b73db4fd0ea6dcc0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "policies/vn_dppa_2025.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "vn_dppa_2025"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "52df33c8e964eb56",
+    "type": "split",
+    "children": [
+      {
+        "id": "ed451c745c02c0cd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "33e03817be765f68",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "檔案瀏覽器"
+            }
+          },
+          {
+            "id": "97c9cad6ff13e135",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜尋"
+            }
+          },
+          {
+            "id": "dd593fcb42183701",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "書籤"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 359.5
+  },
+  "right": {
+    "id": "fd21566b1bb8c4c4",
+    "type": "split",
+    "children": [
+      {
+        "id": "4c66278aff4f0431",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cfc56c7bdb8d9446",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "policies/vn_dppa_2025.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "vn_dppa_2025 的反向連結"
+            }
+          },
+          {
+            "id": "30a5c0e8a4fb8e08",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "readme.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "readme 的對外連結"
+            }
+          },
+          {
+            "id": "04ebc2cb53beecc0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "標籤"
+            }
+          },
+          {
+            "id": "2136f344729fdd6b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "policies/vn_dppa_2025.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "vn_dppa_2025 的大綱"
+            }
+          },
+          {
+            "id": "eef27608478c49c3",
+            "type": "leaf",
+            "state": {
+              "type": "mermaid-toolbar-view",
+              "state": {},
+              "icon": "trident-custom",
+              "title": "Mermaid Toolbar"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 237.5
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:開啟快速切換": false,
+      "graph:查看關聯圖": false,
+      "canvas:建立新畫布": false,
+      "daily-notes:開啟今天的每日筆記": false,
+      "templates:插入模板": false,
+      "command-palette:開啟命令面板": false,
+      "mermaid-tools:Open Mermaid Toolbar": false
+    }
+  },
+  "active": "b73db4fd0ea6dcc0",
+  "lastOpenFiles": [
+    "streamlit/re_generation.py",
+    "streamlit/recapacity.py",
+    "streamlit/policy.py",
+    "data/vietnam/policy/VN_VAT_AMEND_2013.pdf",
+    "policies/vn_dppa_2025.md",
+    "field_deifinition.md",
+    "notes/亞洲能源資料庫儀表板計劃.md",
+    "policies",
+    "readme.md",
+    "notes",
+    "2025-05-28.md",
+    "data/vietnam/policy/VN_GOV_ORG_2015.pdf",
+    "未命名.canvas",
+    "data/vietnam/policy/assets_task_01jv3ttx2wf1v9sdz5v53vscac_1747106835_img_0.webp",
+    "2025-05-27.md"
+  ]
+}
