@@ -24,7 +24,7 @@ def load_frontmatter(fpath):
 st.title("Mogoo- Asia Energy Database")
 st.write("This is a demo for the Mogoo- Asia Energy Database!")
 
-files =  glob.glob("/workspaces/energy_db/policies/*.md")
+files =  glob.glob("policies/*.md")
 st.write('read file:', files)
 
 
