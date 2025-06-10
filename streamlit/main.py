@@ -25,6 +25,8 @@ st.title("Mogoo- Asia Energy Database")
 st.write("This is a demo for the Mogoo- Asia Energy Database!")
 
 files =  glob.glob("/workspaces/energy_db/policies/*.md")
+st.write('read file:', files)
+
 
 posts = []
 for f in files:
@@ -36,6 +38,7 @@ for f in files:
     posts.append(post_obj)
 
 meta_df = pd.DataFrame([p['metadata'] | {"file":f} for p, f in zip(posts, files)])
+
 meta_df['effective_year'] = meta_df['effective_year'].astype(str)
 
 policy_label= meta_df['country'] + "-" + meta_df['topic'] + "-" + meta_df['effective_year'].astype(str)
