@@ -25,8 +25,6 @@ st.title("Mogoo- Asia Energy Database")
 st.write("This is a demo for the Mogoo- Asia Energy Database!")
 
 files =  glob.glob("policies/*.md")
-st.write('read file:', files)
-
 
 posts = []
 for f in files:
