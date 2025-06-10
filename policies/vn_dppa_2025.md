@@ -1,14 +1,13 @@
 ---
 country: VN
-policy_id: 57/2025/ND-CP
+policy_id: "57/2025/ND-CP"
 topic: DPPA
 full_name: Direct Power Purchase Agreement
 effective_year: 2025
 status: active
 policy_type: renewable energy procurement
 legal_level: Decrees of the Government
-source:
-  - https://vanban.chinhphu.vn/?pageid=27160&docid=213012
+source: "https://vanban.chinhphu.vn/?pageid=27160&docid=213012"
 ---
 ### Summary
 On the mechanism for direct electricity purchase and sale between renewable energy generators (RE GENCO) and large electricity consumers
