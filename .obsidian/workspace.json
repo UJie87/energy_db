@@ -206,6 +206,8 @@
   },
   "active": "b73db4fd0ea6dcc0",
   "lastOpenFiles": [
+    "streamlit/Home.py",
+    "streamlit/requirements.txt",
     "streamlit/re_generation.py",
     "streamlit/recapacity.py",
     "streamlit/policy.py",
