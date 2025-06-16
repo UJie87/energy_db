@@ -6,69 +6,44 @@ from pathlib import Path
 import re
 
 
-def load_frontmatter(fpath):
-    with open(fpath, 'r', encoding='utf-8') as f:
-        content = f.read()
-    if content.startswith('---'):
-        # Parse YAML frontmatter
-        parts = content.split('---', 2)
-        if len(parts) >= 3:
-            yaml_part = parts[1]
-            body_part = parts[2]
-            meta = yaml.safe_load(yaml_part)
-            return meta, body_part.strip()
-    return {}, content.strip()
-
-
+st.set_page_config(
+    page_title = 'Mogoo DB'
+)
 
 st.title("Mogoo- Asia Energy Database")
 st.write("This is a demo for the Mogoo- Asia Energy Database!")
 
-files =  glob.glob("policies/*.md")
+st.subheader("APAC Renewable Energy Procurement Mechanism Overview")
+data = [
+    {"Country": "Indonesia", "Electricity Market Structure": "competitive wholesale & retail", "On-site CPPA": "🟩", "Physical Off-site CPPA": "🟩", "Virtual Off-site CPPA": "🟩", "Utility Green Tariff": ""},
+    {"Country": "Japan", "Electricity Market Structure": "competitive wholesale & retail", "On-site CPPA": "🟩", "Physical Off-site CPPA": "🟩", "Virtual Off-site CPPA": "🟩", "Utility Green Tariff": ""},
+    {"Country": "Malaysia", "Electricity Market Structure": "regulated", "On-site CPPA": "🟩", "Physical Off-site CPPA": "🟩", "Virtual Off-site CPPA": "🟨", "Utility Green Tariff": "🟩"},
+    {"Country": "Philippine", "Electricity Market Structure": "hybrid (wholesale without retail)", "On-site CPPA": "🟩", "Physical Off-site CPPA": "🟩", "Virtual Off-site CPPA": "🟥", "Utility Green Tariff": ""},
+    {"Country": "Singapore", "Electricity Market Structure": "competitive wholesale & retail", "On-site CPPA": "🟩", "Physical Off-site CPPA": "🟩", "Virtual Off-site CPPA": "🟩", "Utility Green Tariff": ""},
+    {"Country": "South Korea", "Electricity Market Structure": "hybrid (wholesale without retail)", "On-site CPPA": "🟩", "Physical Off-site CPPA": "🟩", "Virtual Off-site CPPA": "🟩", "Utility Green Tariff": ""},
+    {"Country": "Taiwan", "Electricity Market Structure": "regulated", "On-site CPPA": "🟩", "Physical Off-site CPPA": "🟩", "Virtual Off-site CPPA": "🟥", "Utility Green Tariff": "🟨"},
+    {"Country": "Thailand", "Electricity Market Structure": "regulated", "On-site CPPA": "🟩", "Physical Off-site CPPA": "🟨", "Virtual Off-site CPPA": "🟥", "Utility Green Tariff": "🟩"},
+    {"Country": "Viet Nam", "Electricity Market Structure": "regulated", "On-site CPPA": "🟩", "Physical Off-site CPPA": "🟨", "Virtual Off-site CPPA": "🟥", "Utility Green Tariff": "🟩"}
+]
 
-posts = []
-for f in files:
-    meta, body = load_frontmatter(f)
-    post_obj ={
-        'metadata': meta,
-        'body': body
-    }
-    posts.append(post_obj)
+df=pd.DataFrame(data)
 
-meta_df = pd.DataFrame([p['metadata'] | {"file":f} for p, f in zip(posts, files)])
-
-meta_df['effective_year'] = meta_df['effective_year'].astype(str)
-
-policy_label= meta_df['country'] + "-" + meta_df['topic'] + "-" + meta_df['effective_year'].astype(str)
-policy = st.selectbox(
-    "Choose a policy",
-    policy_label
+edited = st.data_editor(
+    df,
+    column_config={
+        "On-site CPPA": st.column_config.TextColumn(disabled=True),
+        "Remark": st.column_config.TextColumn(disabled=True),
+    },
+    use_container_width=True,
+    hide_index= True,
+    disabled=True,
+    num_rows="fixed",
+    key="mechanism_table"
 )
-post= posts[policy_label.tolist().index(policy)]
+
+st.subheader("Each Country Mechanism Details")
+select_country = st.selectbox("Select a country", df['Country'].unique())
 
 
-with st.container(border=True):
-    st.markdown(f"## {post['metadata']['country']} {post['metadata']['policy_id']}")
-    col1,col2, col3, col4 = st.columns([1, 1, 1, 1])
-    col1.metric("Country", post['metadata']['country'])
-    col2.metric("Effective Year", post['metadata']['effective_year'])
-    col3.metric("Status", post['metadata']['status'])
-    col4.metric("Topic", post['metadata']['topic'])
 
-# split the cotent into summary
-RAW = post['body']
-if "<!--SUMMARY SPLIT-->" in RAW:
-    summary, full = RAW.split("<!--SUMMARY SPLIT-->", 1)
-else:
-    summary, full = RAW, ""
 
-st.markdown(summary, unsafe_allow_html=True)
-
-parts = re.split(r"<!--CARD:(.*?)-->", full)
-
-cards = [(parts[i+1].strip(), parts[i+2].strip())
-         for i in range(0, len(parts)-1, 2)]
-
-for title, content in cards:
-    with st.expander(title, expanded=False):
-        st.markdown(content, unsafe_allow_html=True)
