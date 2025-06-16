@@ -206,6 +206,11 @@
   },
   "active": "b73db4fd0ea6dcc0",
   "lastOpenFiles": [
+    "data/remachism.csv",
+    "streamlit/pages/re_generation.py",
+    "streamlit/pages/policy.py",
+    "streamlit/pages",
+    "streamlit/新增資料夾",
     "streamlit/Home.py",
     "streamlit/requirements.txt",
     "streamlit/re_generation.py",
@@ -215,11 +220,8 @@
     "policies/vn_dppa_2025.md",
     "field_deifinition.md",
     "notes/亞洲能源資料庫儀表板計劃.md",
-    "policies",
     "readme.md",
-    "notes",
     "2025-05-28.md",
-    "data/vietnam/policy/VN_GOV_ORG_2015.pdf",
     "未命名.canvas",
     "data/vietnam/policy/assets_task_01jv3ttx2wf1v9sdz5v53vscac_1747106835_img_0.webp",
     "2025-05-27.md"
