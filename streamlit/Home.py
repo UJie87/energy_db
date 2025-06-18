@@ -7,7 +7,8 @@ import re
 
 
 st.set_page_config(
-    page_title = 'Mogoo DB'
+    page_title = 'Mogoo DB',
+    layout = "wide"
 )
 
 st.title("Mogoo- Asia Energy Database")
@@ -31,18 +32,34 @@ df=pd.DataFrame(data)
 edited = st.data_editor(
     df,
     column_config={
-        "On-site CPPA": st.column_config.TextColumn(disabled=True),
-        "Remark": st.column_config.TextColumn(disabled=True),
+        "Color": st.column_config.TextColumn(disabled=True),
+        "Description": st.column_config.TextColumn(disabled=True),
     },
     use_container_width=True,
-    hide_index= True,
+    hide_index=True,
     disabled=True,
     num_rows="fixed",
-    key="mechanism_table"
+    key="policy_table"
 )
+
+
+desc_df= pd.read_csv("data/re_mechanism.csv")
+
 
 st.subheader("Each Country Mechanism Details")
 select_country = st.selectbox("Select a country", df['Country'].unique())
+
+language_map = {"繁體中文": "zh-TW", "English": "en"}
+selected_lang_label = st.radio("choose language", list(language_map.keys()), horizontal=True)
+selected_lang= language_map[selected_lang_label]
+
+filter_lang_df= desc_df[desc_df['Language']==selected_lang]
+
+country_data = filter_lang_df[filter_lang_df["Country"]==select_country]
+
+for x, y in country_data.iterrows():
+    with st.expander(f"{y['Type']}"):
+        st.write(y['Description'])
 
 
 
