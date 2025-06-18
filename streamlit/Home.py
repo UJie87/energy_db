@@ -7,12 +7,15 @@ import re
 
 
 st.set_page_config(
-    page_title = 'Mogoo DB',
+    page_title = 'Mogoo Asian Electricity Database',
     layout = "wide"
 )
 
-st.title("Mogoo- Asia Energy Database")
-st.write("This is a demo for the Mogoo- Asia Energy Database!")
+st.title("Mogoo- Asian Electricity Database")
+
+st.subheader("Things you have to know this week!")
+st.page_link("pages/re30.py", label="Taiwan RE30 Program- Taipower Public Briefing Takeaway (2025.06.18)", icon="📄")
+
 
 st.subheader("APAC Renewable Energy Procurement Mechanism Overview")
 data = [
