@@ -221,6 +221,7 @@
   },
   "active": "33e03817be765f68",
   "lastOpenFiles": [
+    "streamlit/pages/offshore_wind_map.py",
     "osw_bbox.geojson",
     "data/processed/tw/osw_geo.py",
     "data/raw/tw_osw_site.csv",
@@ -234,7 +235,6 @@
     "article/Taiwan",
     "article",
     "streamlit/pages/re30.py",
-    "data/re_mechanism.csv",
     "field_deifinition.md",
     "notes/亞洲能源資料庫儀表板計劃.md",
     "readme.md",
