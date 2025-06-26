@@ -27,7 +27,7 @@ bbox = (
 def make_corners(r):
     return{
         'SW': (r.min_lon, r.min_lat),
-        'SW': (r.max_lon, r.min_lat),
+        'SE': (r.max_lon, r.min_lat),
         'NE': (r.max_lon, r.max_lat),
         'NW': (r.min_lon, r.max_lat)
     }
@@ -37,7 +37,7 @@ bbox['corners']= bbox.apply(make_corners, axis=1)
 bbox['geometry']= bbox.apply(
     lambda r: Polygon([
         r.corners['SW'],
-        r.corners['SW'],
+        r.corners['SE'],
         r.corners['NE'],
         r.corners['NW']
     ]),
