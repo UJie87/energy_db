@@ -1,4 +1,7 @@
 streamlit
+streamlit-folium
+folium
+pyproj
 pandas
 pyyaml
 altair
