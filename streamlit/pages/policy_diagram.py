@@ -22,8 +22,8 @@ edges = [
 ]
 
 config = Config(
-    width=2000,
-    height=1000,
+    width=700,
+    height=500,
     direction=True,
     nodeHighlightBehavior=True,
     highlightColor='#F7A7A6',
