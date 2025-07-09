@@ -117,7 +117,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 359.5
+    "width": 200
   },
   "right": {
     "id": "fd21566b1bb8c4c4",
@@ -196,8 +196,8 @@
             "state": {
               "type": "mermaid-toolbar-view",
               "state": {},
-              "icon": "trident-custom",
-              "title": "Mermaid Toolbar"
+              "icon": "lucide-file",
+              "title": "外掛程式已不復活躍"
             }
           }
         ],
@@ -221,6 +221,7 @@
   },
   "active": "33e03817be765f68",
   "lastOpenFiles": [
+    "data/processed/tw/tw_osw_detailed.csv",
     "streamlit/pages/offshore_wind_map.py",
     "osw_bbox.geojson",
     "data/processed/tw/osw_geo.py",
@@ -234,7 +235,6 @@
     "article/Taiwan/RE30_Program_Taipower_Public_Briefing_zh-TW.md",
     "article/Taiwan",
     "article",
-    "streamlit/pages/re30.py",
     "field_deifinition.md",
     "notes/亞洲能源資料庫儀表板計劃.md",
     "readme.md",
